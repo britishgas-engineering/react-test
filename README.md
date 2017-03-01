@@ -1,4 +1,6 @@
-# React Native Test
+# React Native Test  
+
+![travis build passing](https://travis-ci.org/britishgas-engineering/react-test.svg?branch=master)
 
 - Create an epic from master with your name in the branch.
 - Complete all work in the epic branch.
