@@ -1,5 +1,8 @@
 module.exports = {
-  extends: 'eslint:recommended',
+  extends: [
+    'eslint:recommended',
+    'plugin:jest/recommended'
+  ],
   parserOptions: {
     ecmaVersion: 6,
     sourceType: 'module'
@@ -7,10 +10,17 @@ module.exports = {
   parser: 'babel-eslint',
   env: {
     'browser': true,
-    'es6': true
+    'es6': true,
+    'jest': true
   },
+  plugins: [
+    'jest'
+  ],
   rules: {
-    eqeqeq: 'error',
+    'jest/no-disabled-tests': 'warn',
+    'jest/no-focused-tests': 'error',
+    'jest/no-identical-title': 'error',
+    'eqeqeq': 'error',
     'no-debugger': 'error',
     'no-dupe-args': 'error',
     'no-dupe-keys': 'error',
@@ -48,13 +58,13 @@ module.exports = {
     'array-bracket-spacing': ['warn', 'never'],
     'block-spacing': ['warn', 'never'],
     'brace-style': 'warn',
-    camelcase: 'warn',
+    'camelcase': 'warn',
     'comma-dangle': ['warn', 'never'],
     'comma-spacing': ['warn', {'before': false, 'after': true }],
     'comma-style': ['warn', 'last'],
     'computed-property-spacing': ['warn', 'never'],
     'eol-last': 'warn',
-    indent: ['warn', 2],
+    'indent': ['warn', 2],
     'key-spacing': [
       'warn', {
         beforeColon: false,
@@ -84,9 +94,9 @@ module.exports = {
     'one-var-declaration-per-line': ['warn', 'initializations'],
     'operator-linebreak': ['warn', 'after'],
     'quote-props': ['warn', 'as-needed'],
-    quotes: [2, 'single', {'avoidEscape': true, 'allowTemplateLiterals': true}],
+    'quotes': [2, 'single', {'avoidEscape': true, 'allowTemplateLiterals': true}],
     'semi-spacing': ['warn', {'before': false, 'after': true}],
-    semi: ['warn', 'always'],
+    'semi': ['warn', 'always'],
     'space-before-blocks': 'warn',
     'space-in-parens': ['warn', 'never'],
     'space-infix-ops': 'warn',
