@@ -1,11 +1,19 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'plugin:jest/recommended'
+    'plugin:react/recommended'
+  ],
+  plugins: [
+    'jest',
+    'react',
+    'react-native'
   ],
   parserOptions: {
     ecmaVersion: 6,
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaFeatures: {
+      'jsx': true
+    }
   },
   parser: 'babel-eslint',
   env: {
@@ -13,9 +21,9 @@ module.exports = {
     'es6': true,
     'jest': true
   },
-  plugins: [
-    'jest'
-  ],
+  'globals': {
+    'React': true
+  },
   rules: {
     'jest/no-disabled-tests': 'warn',
     'jest/no-focused-tests': 'error',

@@ -3,11 +3,11 @@
 [![travis build passing](https://travis-ci.org/britishgas-engineering/react-test.svg?branch=master)](https://travis-ci.org/britishgas-engineering/react-test)
 
 
-- Create an epic from master with your name in the branch.
+- Create an epic from master with your name in the branch. `epic/${YOUR_NAME}`
 - Complete all work in the epic branch.
 - Raise a pull request
-- Application must work in both android and ios
 
+### application requirements are below
 
 ```feature
 Scenario: application user creates a new list
